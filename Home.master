@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link rel="Stylesheet" href="StyleSheet1.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 964px;
+        }
+        .header {
+        display: flex; /* Flexbox for horizontal layout */
+        justify-content: space-between; /* Space between two menus */
+        align-items: center; /* Vertically center items */
+        background-color: #B5C7DE; /* Header background color */
+        padding: 10px; /* Optional padding for spacing */
+    }
+    .menu-left,
+    .menu-right {
+        margin: 0;
+        padding: 0;
+    }
+    .menu-left {
+        width: 90%; /* Adjust width of the left menu */
+    }
+    .menu-right {
+        width: 10%; /* Adjust width of the right menu */
+        text-align: right; /* Align the menu items to the right */
+    }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!--top-->
+    <div class="header-container">
+        <img src="Image/SUM-removebg-preview.png" alt="Header Image" class="header-image"/>
+        <h1 class="header-text">
+            Scholar Ultimate Matrix</h1>
+    </div>
+    <!-- Header with Navigation Menu -->
+    <div class="header">
+    <!-- Left Aligned Menu -->
+    <asp:Menu ID="Menu1" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2"
+              Font-Names="Verdana" Font-Size="1em" ForeColor="#284E98" StaticSubMenuIndent="10px"
+              Orientation="Horizontal" CssClass="menu-left">
+        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <DynamicMenuStyle BackColor="#B5C7DE" />
+        <DynamicSelectedStyle BackColor="#507CD1" />
+        <Items>
+            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="~/OTPLogin.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Faculty" Value="Faculty" NavigateUrl="~/LoginT.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Student" Value="Student" NavigateUrl="~/LoginS.aspx"></asp:MenuItem>
+        </Items>
+        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <StaticSelectedStyle BackColor="#507CD1" />
+    </asp:Menu>
+
+    <asp:Menu ID="Menu2" runat="server" BackColor="#B5C7DE" DynamicHorizontalOffset="2"
+              Font-Names="Verdana" Font-Size="1em" ForeColor="#284E98" StaticSubMenuIndent="10px"
+              Orientation="Horizontal" CssClass="menu-right">
+        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <DynamicMenuStyle BackColor="#B5C7DE" />
+        <DynamicSelectedStyle BackColor="#507CD1" />
+        <Items>
+            <asp:MenuItem Text="Login" Value="Login" NavigateUrl="~/OTPLogin.aspx"></asp:MenuItem>
+            <asp:MenuItem Text="Sign Up" Value="Sign Up" NavigateUrl="~/SignUp.aspx"></asp:MenuItem>
+        </Items>
+        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+        <StaticSelectedStyle BackColor="#507CD1" />
+    </asp:Menu>
+
+    <!-- Right Aligned Menu -->
+</div>
+    <!-- Main Content Area -->
+    <div class="content">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!-- Footer -->
+    <div class="footer-container">
+        <p>
+            &copy; Scholar Ultimate Matrix. All rights reserved.</p>
+    </div>
+    </form>
+</body>
+</html>

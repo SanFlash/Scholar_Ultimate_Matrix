@@ -1,0 +1,174 @@
+﻿/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Payment Container Styling */
+.payment-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Title Styling */
+.payment-container h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Label Styling */
+label {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Input, Dropdown, and RadioButton List Styling */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+/* Focus Effect */
+.form-control:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+}
+
+/* Radio Button List Styling */
+.radio-button-list {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increase the gap between radio buttons */
+}
+
+/* Button Styling */
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #004a99;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+/* Panels for Installment & Fee */
+#installmentsSection, #feeSection {
+    display: none;
+}
+
+
+
+/* Panel Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Visibility of Panels after Selection */
+#installmentsSection {
+    animation: slideIn 0.6s forwards;
+}
+
+#feeSection {
+    display: block;
+    animation: fadeIn 0.6s forwards;
+}
+
+/* Align Radio Buttons with Label in the Same Line */
+#studentsSection {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Increase the gap between label and radio buttons */
+    margin-top: 20px;
+}
+
+#studentsSection label {
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+/* Centering the Content */
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .payment-container {
+        padding: 30px;
+        margin: 20px;
+    }
+
+    .payment-container h2 {
+        font-size: 28px;
+    }
+
+    .form-control {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #studentsSection {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #studentsSection label {
+        margin-bottom: 10px;
+    }
+}
